@@ -20,8 +20,8 @@
 ## 2. javascript là gì:
 
 ### Ngôn ngữ lập trình là gì:
-Ngôn ngữ lập trình bao gồm những thành phần nào
-- synctax: bộ quy tắc hình thànhnên ngôn ngữ.
+Ngôn ngữ lập trình bao gồm những thành phần nào:
+- synctax: bộ quy tắc hình thành nên ngôn ngữ.
 - variable: cách khai báo biến.
 - function: cách khai báo và sử dụng function.
 - control structures: cấu trúc điều khiển.
@@ -36,16 +36,31 @@ Javascript không liên quan tới java vì thời điểm đó java đang thố
 
 ECMAScript: là đặc tả ngôn ngữ tài liệu nó không phải là ngôn ngữ. Còn js là 1 ngôn ngữ được cài đặt theo đặc tả của ECMAScript
 
-Babel chuyển code ES6 -> ES5.
+Trong JavaScript, "Babel" là một công cụ được sử dụng để biên dịch (hoặc chuyển đổi) mã JavaScript từ phiên bản mới nhất (ES6/ES2015) sang các phiên bản cũ hơn, phổ biến hơn mà trình duyệt web hiện đang hỗ trợ. Babel cho phép bạn viết mã JavaScript sử dụng các tính năng mới nhất của ngôn ngữ mà không cần lo lắng về việc có thể không tương thích với các trình duyệt cũ hơn.
+
+Cụ thể, Babel thường được sử dụng để chuyển đổi mã JavaScript sử dụng cú pháp mới như Arrow Functions, Template Strings, và Class Syntax thành các phiên bản tương đương hoạt động trên các trình duyệt cũ hơn như Internet Explorer 11 hoặc phiên bản cũ của Chrome và Firefox.
+
+Babel cũng có thể được sử dụng để thêm các tính năng hoặc plugins mà ngôn ngữ chưa hỗ trợ mặc định. Điều này giúp phát triển viên có thể sử dụng các tính năng mới một cách dễ dàng và an toàn hơn mà không cần phải lo lắng về khả năng tương thích ngược.
 
 ### Javascript làm được gì:
 
-- FE: reactjs, angular, vuejs, svelte, remix,...
-- Mobile: React Native.
-- BE: nodejs + express, nestjs,...
-- DataBase: mongoDB,...
+
+JavaScript là một ngôn ngữ lập trình phổ biến được sử dụng rộng rãi trong phát triển web và cả ngoài web. Dưới đây là một số ứng dụng và tính năng chính của JavaScript:
+
+1. __Phát triển web__: JavaScript được sử dụng để tạo ra các trang web tương tác và động, từ việc thêm hiệu ứng và chức năng tương tác cho trang web cho đến phát triển các ứng dụng web phức tạp như trò chơi trực tuyến, ứng dụng đám mây, và các ứng dụng web thương mại điện tử.
+
+2. __Front-end Development__: JavaScript là một phần quan trọng của front-end development, được sử dụng để tạo và điều khiển giao diện người dùng của trang web. Frameworks như React, Angular và Vue.js cung cấp các công cụ và thư viện mạnh mẽ để phát triển ứng dụng web front-end.
+
+3. __Back-end Development__: JavaScript cũng có thể được sử dụng để phát triển phần back-end của ứng dụng web thông qua các framework như Node.js. Node.js cho phép các nhà phát triển sử dụng JavaScript để viết mã back-end, cho phép chia sẻ mã giữa phần front-end và back-end của ứng dụng.
+
+4. __Ứng dụng di động__: JavaScript cũng được sử dụng trong việc phát triển các ứng dụng di động thông qua các framework như React Native và Ionic, cho phép nhà phát triển xây dựng các ứng dụng di động đa nền tảng sử dụng mã nguồn một cách hiệu quả.
+
+5. __Game Development__: JavaScript cũng có thể được sử dụng để phát triển trò chơi trực tuyến thông qua các thư viện và framework như Phaser và Three.js.
+
+6. __Extensions và Plugins__: JavaScript cũng được sử dụng để tạo ra các extension và plugins cho các trình duyệt web, cho phép tùy chỉnh trải nghiệm người dùng hoặc thêm các tính năng mới vào các trình duyệt.
 
 ### Thực thi code js:
+
 cài đặt nodejs.
 
 node index.js
@@ -147,6 +162,26 @@ button.addEventListener('click', function() {
 
 ```
 
+8. Semicolon - Dấu chấm phẩy.
+- Có thể bỏ dấu chấm phẩy, nó vẫn chạy được.
+- Tuỳ team mà sẽ prefer có hoặc không có dấu chấm phẩy.
+- Mình thì prefer dùng dấu chấm phẩy và dùng prettier để nó tự thêm hehe
+- Tuy nhiên có một số trường hợp nó sẽ hiểu sai:
+
+```js
+// mong muốn code dưới này hiểu là 2 statement (dòng lệnh) khác nhau
+alert("Hello")
+[1, 2].forEach(alert);
+// nhưng thật ra code sẽ hiểu thế này 🤣
+alert("Hello")[1, 2].forEach(alert);
+// to fix, thêm dấu chấm phẩy
+alert("Hello");
+[1, 2].forEach(alert);
+
+```
+
+>Tham khảo: https://javascript.info/structure
+
 ## 5. cách đặt tên biến:
 
 Đặt tên biến, hàm và các đối tượng trong JavaScript là một phần quan trọng của việc viết mã. Điều này không chỉ làm cho mã của bạn dễ đọc hơn mà còn giúp bạn và những người khác hiểu rõ mục đích của các phần mã đó. Dưới đây là một số quy tắc và gợi ý khi đặt tên trong JavaScript:
@@ -204,8 +239,27 @@ let carModel = "Toyota";
 
 Nhớ rằng, quan trọng nhất là làm cho mã của bạn dễ đọc và dễ hiểu cho người khác.
 
-## 6. biến
-Trong JavaScript, let, const, và var đều được sử dụng để khai báo biến, nhưng chúng có những đặc điểm và cách hoạt động khác nhau.
+## 6. Biến
+
+Cách khai báo biến trong JS
+
+- Với ES5 thì dùng var (function scope)
+- Từ ES6 thì dùng const hoặc let (block scope)
+- Scope thì mình sẽ tìm hiểu sau.
+- const thì dùng cho hằng số hoặc biến mà không có nhu cầu thay đổi.
+- let thì dùng cho biến có mong muốn sẽ thay đổi giá trị.
+
+Cách đặt tên cho biến
+
+- Dùng Tiếng Anh.
+- Ðặt tên để biết biến đó chứa giá trị gì.
+- Không đánh đố nhau, đặt tên một đằng lưu giá trị một nẻo.
+- Với true/false, đặt tên với prefix has hoặc is hoặc show hoặc từ mang ý nghĩa chỉ có nhận giá trị true
+hoặc false.
+- Còn lại thì dùng danh từ.
+- Với dạng danh sách thì thêm suffix List
+
+Trong JavaScript, let, const, và var đều được sử dụng để khai báo biến để lưu giá trị tạm thời, nhưng chúng có những đặc điểm và cách hoạt động khác nhau.
 
 1. var:
 
@@ -255,6 +309,12 @@ const y; // Lỗi: Missing initializer in const declaration
 ```
 Tóm lại, khi viết mã trong JavaScript, nên sử dụng const khi giá trị biến không thay đổi, và sử dụng let khi cần phải thay đổi giá trị của biến. Tránh sử dụng var nếu có thể để tránh các vấn đề về phạm vi và làm cho mã của bạn dễ bảo trì hơn.
 
+Case styles
+
+Một số cách ghép từ phổ biến:
+
+<img src="./images/case-styles.png"/>
+
 ## 7. Temporal Dead Zone
 
 Trong JavaScript, "Temporal Dead Zone" (TDZ) là một khái niệm liên quan đến phạm vi và hoisting của biến được khai báo bằng let và const. Khi một biến được khai báo bằng let hoặc const, nó sẽ tồn tại trong phạm vi của block mà nó được khai báo, nhưng sẽ không thể truy cập vào giá trị của biến trước khi nó được khai báo.
@@ -293,31 +353,100 @@ x = 10;
 
 Hãy nhớ rằng hoisting chỉ áp dụng cho phần khai báo, không phải phần gán giá trị. Điều này đối với cả biến và hàm.
 
-## 9. kiểu dữ liệu cơ bản:
+## 9. Operators (toán tử):
+### Arithmetic operators (Toán tử số học):
+- Cộng: +
+- Trừ: -
+- Nhân: *
+- Chia: /
+- Chia lấy phần dư: %
+- Tăng một đơn vị: ++
+- Giảm một đơn vị: --
+- Toán tử gán:
+- Gán giá trị: =
+- Gán và cộng: +=
+- Gán và trừ: -=
+- Gán và nhân: *=
+- Gán và chia: /=
+- Gán và chia lấy phần dư: %=
+### Comparison operator (Toán tử so sánh):
+- Bằng: ==
+- Không bằng(khác): !=
+- Tương đương về kiểu và giá trị: ===
+- Không tương đương về kiểu hoặc giá trị: !==
+- Lớn hơn: >
+- Nhỏ hơn: <
+- Lớn hơn hoặc bằng: >=
+- Nhỏ hơn hoặc bằng: <=
+### Logical operators (Toán tử logic):
+- AND logic: && 
+- OR logic: ||
+- NOT logic: !
+### Toán tử ba ngôi:
+- Toán tử ba ngôi: `condition ? expr1 : expr2`
+### Toán tử chuỗi:
+- Nối chuỗi: + 
+### Toán tử bit:
+- AND bit: &
+- OR bit: |
+- XOR bit: ^
+- Phép NOT bit: ~
+- Dịch trái: <<
+- Dịch phải: >>
+- Dịch phải không dấu: >>>
+### Toán tử typeof:
+- Toán tử typeof: `typeof`
+
+Đây chỉ là một số toán tử phổ biến, JavaScript còn có nhiều toán tử khác. Sử dụng các toán tử này để thực hiện các phép tính, so sánh, kiểm tra logic và thực hiện các tác vụ khác trong mã JavaScript
+
+>Tham khảo thêm: https://javascript.info/operators
+
+## 10. kiểu dữ liệu cơ bản:
 
 Trong JavaScript, có một số kiểu dữ liệu cơ bản, bao gồm:
 
-String: Kiểu dữ liệu này được sử dụng để biểu diễn các chuỗi ký tự. Ví dụ:
+### Kiểu nguyên thủy
+__String__: Kiểu dữ liệu này được sử dụng để biểu diễn các chuỗi ký tự. Ví dụ:
 
 ```js
 var message = "Hello, world!";
 ```
 
-Number: Kiểu dữ liệu này được sử dụng để biểu diễn các số. Cả số nguyên và số thập phân đều thuộc kiểu dữ liệu này. Ví dụ:
+__Number__: Kiểu dữ liệu này được sử dụng để biểu diễn các số. Cả số nguyên và số thập phân đều thuộc kiểu dữ liệu này. Ví dụ:
 
 ```js
 var num = 10;
 var pi = 3.14;
 ```
 
-Boolean: Kiểu dữ liệu này chỉ có hai giá trị: true hoặc false. Nó được sử dụng để biểu diễn các giá trị logic. Ví dụ:
+__Boolean__: Kiểu dữ liệu này chỉ có hai giá trị: true hoặc false. Nó được sử dụng để biểu diễn các giá trị logic. Ví dụ:
 
 ```js
 var isTrue = true;
 var isFalse = false;
 ```
 
-Object: Kiểu dữ liệu này cho phép bạn tạo ra các đối tượng, mỗi đối tượng có thể chứa nhiều thuộc tính và phương thức. Ví dụ:
+__Null__: Biểu diễn một giá trị null, tức là không có giá trị hoặc tham chiếu đến đối tượng không tồn tại.
+```js
+var nullValue = null;
+```
+
+__Undefined__: Biểu diễn một biến chưa được gán giá trị, hoặc một thuộc tính không tồn tại trong đối tượng.
+```js
+var undefinedValue = undefined;
+```
+__Symbol__: Là một kiểu dữ liệu mới được giới thiệu trong ECMAScript 6, biểu diễn một giá trị duy nhất không thay đổi được, thường được sử dụng làm các khóa của thuộc tính trong đối tượng.
+```js
+var symbolValue = Symbol("symbol");
+```
+__BigInt__: Là một kiểu dữ liệu mới được giới thiệu trong ECMAScript 2020, cho phép biểu diễn các số nguyên lớn hơn giới hạn của kiểu Number.
+```js
+var bigIntValue = 9007199254740991n;
+```
+
+### Kiểu Object
+
+__Object__: Kiểu dữ liệu này cho phép bạn tạo ra các đối tượng, mỗi đối tượng có thể chứa nhiều thuộc tính và phương thức. Ví dụ:
 
 ```js
 var person = {
@@ -327,7 +456,7 @@ var person = {
 };
 ```
 
-Array: Kiểu dữ liệu này cho phép bạn tạo ra các mảng, mỗi mảng có thể chứa nhiều phần tử có cùng hoặc khác kiểu dữ liệu. Ví dụ:
+__Array__: Kiểu dữ liệu này cho phép bạn tạo ra các mảng, mỗi mảng có thể chứa nhiều phần tử có cùng hoặc khác kiểu dữ liệu. Ví dụ:
 
 ```js
 var numbers = [1, 2, 3, 4, 5];
@@ -335,3 +464,4 @@ var fruits = ["apple", "banana", "orange"];
 ```
 
 Các kiểu dữ liệu này cùng với các cấu trúc đi kèm như object và array là những khái niệm quan trọng trong JavaScript, giúp bạn xây dựng và làm việc với dữ liệu một cách linh hoạt và mạnh mẽ.
+
