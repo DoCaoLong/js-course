@@ -1,19 +1,32 @@
-// const name = 'Long';
-// const name2 = "Do"
-// const name3 = "abc"
-// const name4 = "long do frontend"
-// const lastName = name + name2
-// console.log('lastName :>> ', lastName);
 
-// const conCat = name.concat(name2 ,[name3, ])
-// console.log('conCat :>> ', conCat);
 
-// const inC = name4.indexOf("abc")
-// console.log('inC :>> ', inC);
+let a = '10'
 
-// let a = "long do frontend"
-// console.log('slice :>> ', a.slice(0 , -8));
-// console.log('substring', a.substring(0, -1))
+if(a == "2"){
+    console.log(2)
+}else if(a == "3"){
+    console.log(3)
+}else if(a == "4"){
+    console.log(4)
+}else{
+    console.log(0)
+}
 
-let a = "long"
-// -> gnol
+
+switch (a) {
+    case "1":
+        console.log(1)
+        break;
+    case "2":
+        console.log(2)
+        break;
+    case "3":
+        console.log(3)
+        break;
+    case "4":
+        console.log(4)
+        break;
+    default:
+        console.log(0)
+        break;
+}
