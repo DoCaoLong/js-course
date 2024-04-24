@@ -217,13 +217,14 @@ Biến được khai báo bằng var có thể được khai báo lại và gán
 
 ``` js
 var x = 10;
-console.log(x); // 10
+
+x = 15; // OK
 
 if (true) {
-    var y = 20;
+    var localVar = "I'm a local var";
 }
 
-console.log(y); // 20
+console.log(localVar); // I'm a local var
 ```
 
 2. let:
