@@ -1,11 +1,9 @@
-function map(arr) {
-    let mappedArray = [];
-    for (let i = 0; i < arr.length; i++) {
-        newItem = arr[i] / 2
-        mappedArray.push(newItem);
-    }
-    return mappedArray;
-}
+const array = [1, 2, 3, 4];
 
-let numbers = [2, 6, 10, 4, 5];
-console.log(map(numbers)); // Kết quả: [1, 4, 9, 16, 25]
+//  1 + 2 + 3 + 4
+const initialValue = [];
+const sumWithInitial = array.reduce((accumulator, currentValue) => {
+    return initialValue
+});
+
+console.log(sumWithInitial);
