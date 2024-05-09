@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Debounce Example</title>
+    </head>
+    <body>
+        <input type="text" id="textInput" placeholder="Type something..." />
+        <div id="output"></div>
+
+        <script>
+            // Hàm debounce
+            function debounce(func, delay) {
+                let timeoutId;
+
+                return function () {
+                    clearTimeout(timeoutId);
+
+                    const context = this;
+                    console.log("this :>> ", this);
+                    const args = arguments;
+                    console.log("args :>> ", args);
+
+                    timeoutId = setTimeout(() => {
+                        func.apply(context, args);
+                    }, delay);
+                };
+            }
+
+            // Hàm xử lý sự kiện input
+            function handleInput(event) {
+                const text = event.target.value;
+                document.getElementById("output").innerText = text;
+            }
+
+            // Tạo một phiên bản debounce của hàm xử lý sự kiện input
+            const debouncedHandleInput = debounce(handleInput, 500);
+
+            // Gắn sự kiện input vào input element
+            const inputElement = document.getElementById("textInput");
+            inputElement.addEventListener("input", debouncedHandleInput);
+        </script>
+    </body>
+</html>
