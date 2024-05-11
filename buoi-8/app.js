@@ -1,17 +1,26 @@
-function debounce(callback, wait) {
-    let timeoutId;
-    return function () {
-        if (timeoutId) {
-            clearTimeout(timeoutId);
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".container");
+    const wrapper = document.querySelector(".wrapper");
+    const items = document.querySelectorAll(".item");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+
+    let scrollPosition = 0;
+    const itemWidth = items[0].offsetWidth;
+
+    nextBtn.addEventListener("click", function () {
+        scrollPosition += itemWidth;
+        if (scrollPosition > wrapper.scrollWidth - container.offsetWidth) {
+            scrollPosition = wrapper.scrollWidth - container.offsetWidth;
         }
-        timeoutId = setTimeout(callback, wait);
-    };
-}
+        wrapper.style.transform = `translateX(-${scrollPosition}px)`;
+    });
 
-function log() {
-    console.log("tada");
-}
-
-// log tada 5 times
-const debounceLog = debounce(log, 10000);
-debounceLog();
+    prevBtn.addEventListener("click", function () {
+        scrollPosition -= itemWidth;
+        if (scrollPosition < 0) {
+            scrollPosition = 0;
+        }
+        wrapper.style.transform = `translateX(-${scrollPosition}px)`;
+    });
+});

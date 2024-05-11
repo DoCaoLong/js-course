@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="./app.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .container {
+                width: 300px;
+                overflow-x: auto; /* Cho phép cuộn ngang */
+                overflow-y: hidden; /* Ẩn thanh cuộn dọc */
+                position: relative;
+            }
+
+            .wrapper {
+                white-space: nowrap; /* Ngăn các mục chuyển hàng tự động */
+            }
+
+            .items {
+                display: inline-block; /* Hiển thị các mục trên cùng một dòng */
+            }
+
+            .item {
+                padding: 10px;
+                white-space: nowrap;
+            }
+
+            button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 5px 10px;
+                border: none;
+                background-color: #007bff;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            #prev {
+                left: 0;
+            }
+
+            #next {
+                right: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="wrapper">
+                <div class="items">
+                    <div class="item">1. Lorem</div>
+                    <div class="item">2. Consectetur</div>
+                    <div class="item">3. Sed</div>
+                    <div class="item">4. Ut enim</div>
+                    <div class="item">5. Quis</div>
+                </div>
+            </div>
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+        </div>
+
+        <script src="./app.js"></script>
+    </body>
 </html>
