@@ -1,6 +1,26 @@
-const selectMenu = document.getElementById("selectMenu");
-const output = document.getElementById("output");
+const btn = document.querySelector(".btn")
 
-selectMenu.addEventListener("change", function (event) {
-    output.textContent = `You selected: ${event.target.value}`;
-});
+if (btn) {
+    function handleClick() {
+        alert("thank you! :P");
+    }
+}
+
+btn.addEventListener("click", handleClick);
+
+let handleClick = () => {
+    alert("Minh")
+    console.log("ok")
+}
+
+var handleClick2 = function() {
+        alert("Minh");
+}
+
+//  (function () {
+//      alert("Minh");
+//  })();
+
+
+
+// btn.removeEventListener("click", handleClick);
